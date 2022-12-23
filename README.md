@@ -1,8 +1,7 @@
 # Kenzie-Imoveis-Backend
-
 Primeiro projeto back-end;
 
-Deploy: https://k-imoveis.onrender.com;
+Deploy: https://k-imoveis.onrender.com; <br>
 Status: *Em desenvolvimento*;
 
 Descrição: Projeto back-end utilizando TypeORM, TypeScript, Express, Node, JWToken, Bcrypt e Yup onde é possível:
