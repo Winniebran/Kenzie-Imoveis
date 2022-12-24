@@ -4,7 +4,7 @@ Primeiro projeto back-end;
 Deploy: https://k-imoveis.onrender.com; <br>
 Status: *Em desenvolvimento*;
 
-Descrição: Projeto back-end utilizando TypeORM, TypeScript, Express, Node, JWToken, Bcrypt e Yup onde é possível:
+Descrição: Projeto back-end utilizando TypeORM, TypeScript, Express, Node, PostgreSQL, JWToken, Bcrypt e Yup onde é possível:
     
     1. Criar, listar, deletar e editar usuários;
     2. Não permite criar um usuário que já existe;
