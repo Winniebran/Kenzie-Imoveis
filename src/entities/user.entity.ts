@@ -7,8 +7,10 @@ import {
   UpdateDateColumn,
   BeforeInsert,
   BeforeUpdate,
-  DeleteDateColumn
+  DeleteDateColumn,
+  OneToMany
 } from "typeorm";
+import { Schedules } from "./schedules_user_properties.entity";
 
 @Entity("users")
 export class User {
@@ -46,4 +48,7 @@ export class User {
 
   @DeleteDateColumn()
   deletedAt: Date;
+
+  @OneToMany(() => Schedules, (schedules) => schedules.user)
+  schedules: Schedules[]
 }
