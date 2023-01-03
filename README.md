@@ -1,6 +1,6 @@
 K Imóveis 
 
-Deploy: https://k-imoveis.onrender.com;
+Deploy: https://k-imoveis-api.onrender.com;
 
 Descrição: É um projeto *back-end* que foi produzido utilizando TypeScript, Node, Express, PostegreSQL, TypeORM, JWToken, Bcryptjs, Yup e Express-async-errors, onde:
 
