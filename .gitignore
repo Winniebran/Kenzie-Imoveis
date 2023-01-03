@@ -2,3 +2,7 @@ node_modules/
 dist/
 yarn.lock
 .env
+.idéia/
+.vscode/
+.tmp/
+Temp/
