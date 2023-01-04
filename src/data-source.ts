@@ -4,14 +4,6 @@ import "dotenv/config";
 import "reflect-metadata";
 
 const setDataSourceConfig = (): DataSourceOptions => {
-  if (process.env.NODE_ENV === "test")
-    return {
-      type: "sqlite",
-      database: ":memory:",
-      synchronize: true,
-      entities: ["src/entities/*.ts"],
-    };
-
   if (process.env.NODE_ENV === "production") {
     return {
       type: "postgres",
@@ -20,6 +12,14 @@ const setDataSourceConfig = (): DataSourceOptions => {
       migrations: [path.join(__dirname, "./migrations/**.{js,ts}")],
     };
   }
+
+  if (process.env.NODE_ENV === "test")
+    return {
+      type: "sqlite",
+      database: ":memory:",
+      synchronize: true,
+      entities: ["src/entities/*.ts"],
+    };
 
   return {
     type: "postgres",
