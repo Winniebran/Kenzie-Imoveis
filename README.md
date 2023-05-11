@@ -2,43 +2,48 @@ K Imóveis
 
 Deploy: https://k-imoveis-api.onrender.com;
 
-Descrição: É um projeto *back-end* que foi produzido utilizando TypeScript, Node, Express, PostegreSQL, TypeORM, JWToken, Bcryptjs, Yup e Express-async-errors, onde:
+## Descrição: 
 
-- Users
-    1. É possível criar um usuário;
-    2. Não é permitido criar um usuário caso o email já esteja cadastrado;
-    3. É possível listar, editar e deletar os usuários;
-    4. Apenas é possível listar, deletar ou editar um outro usuário, caso tenha autenticação e seja administrador;
-    5. Não permite deletar ou editar um usuário que não possui um id válido ou que já foi deletado;
-    6. Não permite editar um usuário que não possui um id válido;
-    7. Não permite editar os campos: isAdm, isActive e id de qualquer usuário.
+O Kenzie Imóveis API é uma poderosa API desenvolvida com recursos como autenticação, permissões e validações. Ela oferece uma variedade de recursos para gerenciar usuários, categorias, propriedades e agendamentos de forma segura e eficiente. Algumas das principais funcionalidades incluem:
 
-- Login
-    1. É possível realizar o login;
-    2. Não é possível fazer o login com email ou senha incorretas;
-    3. Não é possível logar com um usuário que foi deletado.
+### Gerenciamento de Usuários:
+- Permite criar novos usuários com verificação de email duplicado.
+- Fornece operações de listagem, edição e exclusão de usuários.
+- Apenas usuários autenticados e administradores têm permissão para executar ações em outros usuários.
+- Restringe a edição de campos sensíveis como "isAdm", "isActive" e "id".
 
-- Categories
-    1. É possível criar uma categoria;
-    2. Não é possível criar uma categoria que já exista;
-    3. Apenas é possível criar uma categoria caso tenha autenticação e seja administrador;
-    4. É possível listar todas as categorias;
-    5. É possível listar todas as propriedades de uma determinada categoria;
-    6. Apenas é possível listar todas as propriedades de uma determinada categoria caso essa categoria exista.
+### Autenticação e Login:
+- Permite que os usuários façam login na API.
+- Verifica se o email e a senha fornecidos estão corretos.
+- Impede o login de usuários excluídos.
 
-- Properties
-    1. É possível criar uma propriedade;
-    2. Não é possível criar uma propriedade que já exista;
-    3. Apenas é possível criar uma propriedade caso tenha autenticação e seja administrador;
-    4. Não é possível criar uma propriedade com categoria, cep ou estado inválidos;
-    5. É possível listar todas as propriedaeds.
+### Gerenciamento de Categorias:
+- Permite criar novas categorias com verificação de duplicidade.
+- Apenas usuários autenticados e administradores têm permissão para criar categorias.
+- Fornece operações de listagem de todas as categorias e listagem das propriedades de uma categoria específica.
 
-- Schedules
-    1. É possível criar um agendamento;
-    2. Apenas é possível criar um agendamento caso tenha autenticação e seja administrador;
-    3. O usuário não pode criar dois agendamento iguais na mesma propriedade;
-    4. O usuário não pode criar dois agendamentos na mesma data e horário em propriedades diferentes;
-    5. Não é possível criar um agendamento com data inválida, fora do horário comercial (8h - 18h) ou em uma propriedade que não exista;
-    6. É possível listar todas os agendamentos de uma propriedade;
-    7. Apenas é possível listar os agendamentos de uma propriedade, caso o usuário tenha autenticação e seja administrador;
-    8. Não é possível listar os agendamentos de uma propriedade inexistente.
+### Gerenciamento de Propriedades:
+- Permite criar novas propriedades com validações rigorosas.
+- Apenas usuários autenticados e administradores têm permissão para criar propriedades.
+- Garante a integridade dos dados ao verificar a validade de categoria, CEP e estado.
+- Oferece operação de listagem de todas as propriedades disponíveis.
+
+### Agendamentos:
+- Permite criar novos agendamentos com controle avançado.
+- Apenas usuários autenticados e administradores têm permissão para criar agendamentos.
+- Evita a criação de agendamentos duplicados na mesma propriedade.
+- Impede agendamentos com datas inválidas, fora do horário comercial ou em propriedades inexistentes.
+- Fornece operações de listagem de todos os agendamentos de uma propriedade específica.
+
+Em resumo, o Kenzie Imóveis API é uma solução completa e segura para gerenciar usuários, categorias, propriedades e agendamentos. É uma ferramenta essencial para aplicativos e plataformas imobiliárias, fornecendo recursos avançados e garantindo a integridade dos dados.
+
+## Tecnologias Utilizadas
+- TypeScript; 
+- Node; 
+- Express; 
+- PostegreSQL; 
+- TypeORM; 
+- JWToken; 
+- Bcryptjs; 
+- Yup;
+- Express-async-errors;
